@@ -94,3 +94,9 @@ function countSheeps(arrayOfSheep) {
       }
     } return count;
 }
+
+
+function litres(time){
+    a = 0.5;
+    return Math.floor(a * time);
+}
