@@ -48,7 +48,7 @@ function opposite(number) {
 
 function removeFirstAndLastChar(str){
     return str.slice(1, -1);
-  };
+};
 
 
 function repeatStr (n, s) {
@@ -58,6 +58,14 @@ function repeatStr (n, s) {
     } 
 return result;
 }
+
+function squareSum(numbers){
+    let sum = 0;
+    for(let i = 0; i < numbers.length; i++){
+      sum+= numbers[i] ** 2;
+    }
+    return sum;
+} 
   
   
   
