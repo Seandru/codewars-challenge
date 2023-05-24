@@ -66,6 +66,11 @@ function squareSum(numbers){
     }
     return sum;
 } 
+
+var grasshoperSummation = function (num) {
+    let result = (num * (num + 1))/2;
+    return result;
+}
   
   
   
