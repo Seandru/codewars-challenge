@@ -210,3 +210,7 @@ function paperwork(n, m) {
     }
 }
 
+function invert(array) {
+    return array.map(x => x * -1);
+}
+
