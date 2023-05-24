@@ -42,3 +42,14 @@ function numberToString(num) {
     return JSON.stringify(num);
 }
 
+function opposite(number) {
+    return -number;
+}
+
+function removeFirstAndLastChar(str){
+    return str.slice(1, -1);
+  };
+  
+  
+  
+  
