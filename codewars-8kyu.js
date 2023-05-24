@@ -123,3 +123,14 @@ function century(year) {
     }
     return century;
 }
+
+function abbrevName(name){
+    const names = name.split(' ');
+    const firstName = names[0];
+    const secondName = names[1];
+    const abbrev = firstName[0] + '.' + secondName[0];
+    const toUpperCase = abbrev.toUpperCase();
+    
+    return toUpperCase;
+}
+  
