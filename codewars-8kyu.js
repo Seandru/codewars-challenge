@@ -20,4 +20,12 @@ function makeNegative(num) {
     }
 }
 
+function reverseString(str){
+    let word = '';
+    for(i = str.length - 1; i >= 0; i--){
+      word+= str.charAt(i);
+    } 
+    return word;
+}
+
   
