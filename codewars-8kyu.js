@@ -187,3 +187,11 @@ function lovefunc(flower1, flower2){
 function booleanToString(b){
     return JSON.stringify(b);
 }
+
+function past(h, m, s){
+    const millisecondsFromSecond = 1000 * s;
+    const milliesecondsFromMinutes = 60000 * m;
+    const milliesecondsFromHours = 3600000 * h;
+    return millisecondsFromSecond + milliesecondsFromMinutes + milliesecondsFromHours;
+  }
+
