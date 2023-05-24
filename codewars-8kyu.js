@@ -157,3 +157,11 @@ function greet(name){
     return `Hello, ${name} how are you doing today?`;
 }
 
+function findNeedle(haystack) {
+    for(let i = 0; i < haystack.length; i++){
+      if(haystack[i] === 'needle'){
+        return "found the needle at position" + ' ' + i;
+      }
+    }
+}
+
