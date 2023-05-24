@@ -28,4 +28,12 @@ function reverseString(str){
     return word;
 }
 
+
+function boolToWord(bool){
+    if(bool !== true){
+      return 'No';
+    } else {
+      return 'Yes';
+    } 
+}
   
