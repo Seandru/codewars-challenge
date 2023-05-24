@@ -75,4 +75,13 @@ var grasshoperSummation = function (num) {
 function noSpace(x){ 
     return x.split(' ').join('');
 }
-  
+
+function findSmallestInt(args) {
+    let smallestInt = args[0];
+    for(let i = 0; i < args.length; i++){
+      if(args[i] < smallestInt){
+        smallestInt = args[i];
+      }
+    }
+    return smallestInt;
+  }
