@@ -165,3 +165,7 @@ function findNeedle(haystack) {
     }
 }
 
+function maps(x){
+    return doubled = x.map(y => y * 2);
+}
+
