@@ -195,3 +195,18 @@ function past(h, m, s){
     return millisecondsFromSecond + milliesecondsFromMinutes + milliesecondsFromHours;
   }
 
+function paperwork(n, m) {
+    if (n > 0 && m > 0) {
+      return n * m;
+    }
+    if (n > 0 && m <= 0) {
+      return 0;
+    }
+    if (n <= 0 && m > 0) {
+      return 0;
+    }
+    if (n <= 0 && m <= 0) {
+      return 0;
+    }
+}
+
