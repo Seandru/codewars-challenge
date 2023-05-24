@@ -130,7 +130,12 @@ function abbrevName(name){
     const secondName = names[1];
     const abbrev = firstName[0] + '.' + secondName[0];
     const toUpperCase = abbrev.toUpperCase();
-    
+
     return toUpperCase;
+}
+
+const stringToNumber = function(str){
+    const num = parseInt(str);
+    return num;
 }
   
