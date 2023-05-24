@@ -36,4 +36,8 @@ function boolToWord(bool){
       return 'Yes';
     } 
 }
-  
+
+
+function numberToString(num) {
+    return JSON.stringify(num);
+}
