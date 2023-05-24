@@ -184,3 +184,6 @@ function lovefunc(flower1, flower2){
     }
 }
 
+function booleanToString(b){
+    return JSON.stringify(b);
+}
