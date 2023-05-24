@@ -138,4 +138,12 @@ const stringToNumber = function(str){
     const num = parseInt(str);
     return num;
 }
-  
+
+
+function isDivisible(n, x, y) {
+    if(n % x == 0 && n % y == 0){
+      return true;
+    } else {
+      return false;
+    }
+}
