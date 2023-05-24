@@ -72,5 +72,7 @@ var grasshoperSummation = function (num) {
     return result;
 }
   
-  
+function noSpace(x){ 
+    return x.split(' ').join('');
+}
   
