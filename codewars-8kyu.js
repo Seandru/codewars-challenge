@@ -100,3 +100,19 @@ function litres(time){
     a = 0.5;
     return Math.floor(a * time);
 }
+
+function basicOp(operation, value1, value2) {
+    if (operation === '+') {
+      return value1 + value2;
+    }
+    if (operation === '-') {
+      return value1 - value2;
+    }
+    if (operation === '*') {
+      return value1 * value2;
+    }
+    if (operation === '/') {
+      return value1 / value2;
+    }
+}
+
