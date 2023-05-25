@@ -71,6 +71,16 @@ var isSquare = function(n){
     return false;
   }
 }
+
+function filter_list(l) {
+  let fileteredArray = [];
+  for(i = 0; i < l.length; i++){
+    if(typeof l[i] !== 'string'){
+    let result = fileteredArray.push(l[i]);
+    }
+  } return fileteredArray;
+}
+
 // 8kyu
 
 // The multiply function returns the multiplication between two numbers
