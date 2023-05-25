@@ -1,6 +1,5 @@
 // 7kyu 
 
-// The getCount function
 function getCount(str) {
   count = 0;
   const splitStr = str.split('');
@@ -12,6 +11,13 @@ function getCount(str) {
   return count;
 }
 
+function squareDigits(num){
+  const digits = num.toString().split('');
+  const squareDigits = digits.map(x => x * x);
+  const joinedDigits = squareDigits.join('');
+  const result = parseInt(joinedDigits);
+  return result;
+}
 // 8kyu
 
 // The multiply function returns the multiplication between two numbers
