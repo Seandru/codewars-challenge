@@ -35,7 +35,13 @@ function highAndLow(numbers) {
   return `${highestNumber} ${lowestNumber}`;
 }
 
-
+function descendingOrder(n) {
+  const digits = n.toString().split('');
+  const sortedDigits = digits.sort((a, b) => b - a);
+  const joinedDigits = sortedDigits.join('');
+  const result = parseInt(joinedDigits);
+  return result;
+}
 // 8kyu
 
 // The multiply function returns the multiplication between two numbers
