@@ -18,6 +18,24 @@ function squareDigits(num){
   const result = parseInt(joinedDigits);
   return result;
 }
+
+function highAndLow(numbers) {
+  const splitNumbers = numbers.split(' ');
+  let lowestNumber = parseInt(splitNumbers[0]);
+  let highestNumber = parseInt(splitNumbers[0]);
+  for (let i = 0; i < splitNumbers.length; i++) {
+    const num = parseInt(splitNumbers[i]);
+    if (num < lowestNumber) {
+      lowestNumber = num;
+    }
+    if (num > highestNumber) {
+      highestNumber = num;
+    }
+  }
+  return `${highestNumber} ${lowestNumber}`;
+}
+
+
 // 8kyu
 
 // The multiply function returns the multiplication between two numbers
