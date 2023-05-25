@@ -234,3 +234,19 @@ function findAverage(array) {
   }
   return sum / count;
 }
+
+function betterThanAverage(classPoints, yourPoints) {
+  let count = 0;
+  let sum = 0;
+  for(let i = 0; i < classPoints.length; i++){
+    count++;
+    sum+= classPoints[i];
+  }
+  let averagePoints = sum / count;
+  if(yourPoints > averagePoints){
+    return true;
+  } else {
+    return false;
+  }
+}
+
