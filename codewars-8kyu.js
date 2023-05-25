@@ -250,3 +250,14 @@ function betterThanAverage(classPoints, yourPoints) {
   }
 }
 
+function sum (numbers) {
+  let sum = 0;
+  for(let i = 0; i < numbers.length; i++){
+    sum+= numbers[i];
+  }
+  if(sum === 0){
+    return 0;
+  }
+  return sum;
+};
+
