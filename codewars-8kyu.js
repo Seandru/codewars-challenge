@@ -221,3 +221,16 @@ function areYouPlayingBanjo(name) {
     return name + " does not play banjo";
     }
 }
+
+function findAverage(array) {
+  let count = 0;
+  let sum = 0;
+  for(let i = 0; i < array.length; i++){
+    count++;
+    sum+= array[i];
+  }
+  if(count === 0){
+    return 0;
+  }
+  return sum / count;
+}
