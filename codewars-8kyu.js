@@ -1,3 +1,18 @@
+// 7kyu 
+
+// The getCount function
+function getCount(str) {
+  count = 0;
+  const splitStr = str.split('');
+  for(i = 0; i < splitStr.length; i++){
+    if(splitStr[i] === 'a' || splitStr[i] === 'e' || splitStr[i] === 'i' || splitStr[i] === 'o' || splitStr[i] === 'u'){
+      count++;
+    }
+  }
+  return count;
+}
+
+// 8kyu
 
 // The multiply function returns the multiplication between two numbers
 function multiply(a, b){
