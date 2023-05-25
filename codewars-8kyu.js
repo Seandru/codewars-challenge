@@ -64,6 +64,13 @@ function accum(s) {
   return result;
 }
 
+var isSquare = function(n){
+  if(Math.sqrt(n) % 1 === 0){
+    return true;
+  } else {
+    return false;
+  }
+}
 // 8kyu
 
 // The multiply function returns the multiplication between two numbers
