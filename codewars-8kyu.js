@@ -42,6 +42,18 @@ function descendingOrder(n) {
   const result = parseInt(joinedDigits);
   return result;
 }
+
+function getMiddle(s){
+  let middleChar = 0; 
+  if(s.length % 2 !== 0){
+    middleChar = s.charAt(s.length / 2);
+  } else {
+    middleChar = s.charAt(Math.ceil((s.length / 2) - 1)) + s.charAt(Math.floor(s.length / 2));
+  } 
+  return middleChar;
+} 
+
+
 // 8kyu
 
 // The multiply function returns the multiplication between two numbers
