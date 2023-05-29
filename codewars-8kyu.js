@@ -81,6 +81,17 @@ function filter_list(l) {
   } return fileteredArray;
 }
 
+function isIsogram(str){
+  for(i = 0; i < str.toLowerCase().length; i++){
+    for(j = i + 1; j < str.toLowerCase().length; j++){
+      if(str.toLowerCase()[i] === str.toLowerCase()[j]){
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
 // 8kyu
 
 // The multiply function returns the multiplication between two numbers
