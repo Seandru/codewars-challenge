@@ -109,6 +109,19 @@ function XO(str) {
       }  
 }
 
+function findShort(s) {
+  const words = s.split(' ');
+  let shortestWord = words[0];
+
+  for (let i = 1; i < words.length; i++) {
+    const word = words[i];
+    if (word.length < shortestWord.length) {
+      shortestWord = word;
+    }
+  }
+
+  return shortestWord.length;
+}
 // 8kyu
 
 // The multiply function returns the multiplication between two numbers
