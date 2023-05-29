@@ -122,6 +122,25 @@ function findShort(s) {
 
   return shortestWord.length;
 }
+
+function DNAStrand(dna) {
+  let result = '';
+  const splitDNA = dna.split('');
+  
+  for (let i = 0; i < splitDNA.length; i++) {
+    if (splitDNA[i] === 'A') {
+      result += 'T';
+    } else if (splitDNA[i] === 'T') {
+      result += 'A';
+    } else if (splitDNA[i] === 'C') {
+      result += 'G';
+    } else if (splitDNA[i] === 'G') {
+      result += 'C';
+    }
+  }
+  
+  return result;
+}
 // 8kyu
 
 // The multiply function returns the multiplication between two numbers
