@@ -91,6 +91,23 @@ function isIsogram(str){
   }
   return true;
 }
+function XO(str) {
+  let countX = 0;
+  let countO = 0;
+    for(i = 0; i < str.length; i++){
+      if(str[i] === "X" || str[i] === "x"){
+        countX++;
+      }
+      if(str[i] === "O" || str[i] === "o"){
+        countO++;
+      }
+      }
+      if(countX === countO){
+        return true;
+      } else {
+        return false;
+      }  
+}
 
 // 8kyu
 
