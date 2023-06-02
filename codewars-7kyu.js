@@ -167,4 +167,16 @@ function getCount(str) {
     return numbers[0] + numbers[1];
   };
 
+// The getSum function takes two integers and returns the sum of all the integers between and including them.
+function getSum(a, b) {
+    let sum = 0;
+    let min = Math.min(a, b);
+    let max = Math.max(a, b);
   
+    for (let i = min; i <= max; i++) {
+      sum += i;
+    }
+    
+    return sum;
+}
+
