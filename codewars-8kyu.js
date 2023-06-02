@@ -141,6 +141,16 @@ function DNAStrand(dna) {
   
   return result;
 }
+
+function maskify(cc) {
+  const splitString = cc.split('');
+  for(i = 0; i < splitString.length - 4; i++){
+    splitString[i] = '#';
+  }
+  return splitString.join('');
+}
+
+
 // 8kyu
 
 // The multiply function returns the multiplication between two numbers
