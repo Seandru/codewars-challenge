@@ -180,3 +180,11 @@ function getSum(a, b) {
     return sum;
 }
 
+// The longest function takes two strings, combines them and filters the duplicated chars
+// returning a single string sorted from a-z without repeating chars
+function longest(s1, s2) {
+    const combinedString = s1 + s2;
+    const distinctLetters = Array.from(new Set(combinedString)); 
+    return distinctLetters.sort().join(''); 
+  }
+
