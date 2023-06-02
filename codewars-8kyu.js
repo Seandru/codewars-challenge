@@ -150,7 +150,19 @@ function maskify(cc) {
   return splitString.join('');
 }
 
-
+function sumTwoSmallestNumbers(numbers) {  
+  let firstLowNumber = Infinity;
+  let secondLowNumber = Infinity;
+  
+  for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] < firstLowNumber){
+      secondLowNumber = firstLowNumber;
+      firstLowNumber = numbers[i];
+    } else if(numbers[i] < secondLowNumber) {
+      secondLowNumber = numbers[i];
+    }
+  } return firstLowNumber + secondLowNumber;
+}
 // 8kyu
 
 // The multiply function returns the multiplication between two numbers
