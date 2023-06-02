@@ -163,6 +163,11 @@ function sumTwoSmallestNumbers(numbers) {
     }
   } return firstLowNumber + secondLowNumber;
 }
+
+function sumTwoSmallestNumbers2(numbers){
+  numbers = numbers.sort(function(a, b){return a - b;});
+  return numbers[0] + numbers[1];
+};
 // 8kyu
 
 // The multiply function returns the multiplication between two numbers
