@@ -186,5 +186,17 @@ function longest(s1, s2) {
     const combinedString = s1 + s2;
     const distinctLetters = Array.from(new Set(combinedString)); 
     return distinctLetters.sort().join(''); 
-  }
+}
 
+// The friend function takes an array of strings and returns only the elements that have 
+// exactly 4 chars.
+function friend(friends) {
+    let trueFriends = [];
+    for (let i = 0; i < friends.length; i++) {
+      if (friends[i].length === 4) {
+        trueFriends.push(friends[i]);
+      }
+    }
+    return trueFriends;
+}
+  
