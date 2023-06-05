@@ -234,3 +234,10 @@ for (let i = 0; i < s.length; i++) {
 }
 return errorCount + '/' + s.length;
 }
+
+//The addBinary func returns the sum in binary of two numbers. 
+function addBinary(a,b) {
+  let result = a + b;
+  return result.toString(2);
+}
+
