@@ -212,7 +212,7 @@ function openOrSenior(data){
   });
 }
 
-// The findNextSquare checks if a number is a perfet square and returns the next one
+// The findNextSquare function checks if a number is a perfet square and returns the next one
 function findNextSquare(sq) {
   let x = Math.sqrt(sq);
   if(Number.isInteger(x)){
@@ -221,4 +221,16 @@ function findNextSquare(sq) {
   } else {
     return-1;
   }
+}
+
+// The printerError function returns a counter of chars that are not in the valid range and the length of it 
+function printerError(s) {
+  let errorCount = 0;
+const validRange = /^[a-m]+$/;
+for (let i = 0; i < s.length; i++) {
+  if (!validRange.test(s[i])) {
+    errorCount++;
+  }
+}
+return errorCount + '/' + s.length;
 }
