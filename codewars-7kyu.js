@@ -200,3 +200,14 @@ function friend(friends) {
     return trueFriends;
 }
   
+// The openOrSenior function takes an array made out of two integers, and returns 
+// either Senior or Open based on their value.
+function openOrSenior(data){
+  return data.map(([age, handicap]) => {
+    if (age >= 55 && handicap > 7) {
+      return "Senior";
+    } else {
+      return "Open";
+    }
+  });
+}
