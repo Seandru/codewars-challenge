@@ -241,3 +241,12 @@ function addBinary(a,b) {
   return result.toString(2);
 }
 
+// The isTriangle func checks if three integers can form a triangle using the triangle inequality theorem
+function isTriangle(a, b, c) {
+  if (a > 0 && b > 0 && c > 0) {
+    if (a + b > c && a + c > b && b + c > a) {
+      return true;
+    }
+  }
+  return false;
+}
