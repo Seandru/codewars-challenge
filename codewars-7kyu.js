@@ -211,3 +211,14 @@ function openOrSenior(data){
     }
   });
 }
+
+// The findNextSquare checks if a number is a perfet square and returns the next one
+function findNextSquare(sq) {
+  let x = Math.sqrt(sq);
+  if(Number.isInteger(x)){
+    let y = x + 1;
+    return y * y;
+  } else {
+    return-1;
+  }
+}
