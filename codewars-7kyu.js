@@ -261,3 +261,15 @@ function rowSumOddNumbers(n) {
 	return n*n*n
 }
 
+// The solution function checks whether the first given string ends with the second given string
+function solution(str, ending){
+  if(str.length < ending.length){
+      return false;
+  }
+  for (let i = 1; i <= ending.length; i++) {
+      if (str[str.length - i] !== ending[ending.length - i]) {
+          return false;
+      }
+  }
+  return true;
+}
