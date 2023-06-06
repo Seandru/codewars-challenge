@@ -282,3 +282,17 @@ function oddOrEven(array) {
  }
  return sum % 2 === 0 ? "even" : "odd";
 }
+
+// The reverseWords function reverses each word from a given string.
+function reverseWords(str) {
+  let words = str.split(' ');
+  let reversedWords = [];
+  for (let i = 0; i < words.length; i++) {
+    let word = '';
+    for (let j = words[i].length - 1; j >= 0; j--) {
+      word += words[i].charAt(j);
+    }
+    reversedWords.push(word);
+  }
+  return reversedWords.join(' ');
+}
