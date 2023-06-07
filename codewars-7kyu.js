@@ -315,3 +315,14 @@ function divisors(integer) {
     return divisorsArr.sort((a, b) => a - b);
   }
 }
+
+// The SeriesSum func returns the sum up to the nth term based on the following
+// harmonic series: Series: 1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16 +...
+function SeriesSum(n) {
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    sum += 1 / (1 + i * 3);
+  }
+  return sum.toFixed(2);
+}
+
