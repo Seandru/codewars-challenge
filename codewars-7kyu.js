@@ -296,3 +296,22 @@ function reverseWords(str) {
   }
   return reversedWords.join(' ');
 }
+
+// The divisors func returns an array with all the integer's divisors except for 1 and the number
+function divisors(integer) {
+  let divisorsArr = [];
+  for (let i = 2; i <= Math.sqrt(integer); i++) {
+    if (integer % i === 0) {
+      if (i !== integer / i) {
+        divisorsArr.push(i, integer / i);
+      } else {
+        divisorsArr.push(i);
+      }
+    }
+  }
+  if (divisorsArr.length === 0) {
+    return integer + ' is prime';
+  } else {
+    return divisorsArr.sort((a, b) => a - b);
+  }
+}
