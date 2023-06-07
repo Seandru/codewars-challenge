@@ -326,3 +326,13 @@ function SeriesSum(n) {
   return sum.toFixed(2);
 }
 
+// The removeSmallest func returns a new array without the smallest element of the initial array
+function removeSmallest(numbers) {
+  const smallestNumberIndex = numbers.indexOf(Math.min(...numbers));
+  if (smallestNumberIndex !== -1) {
+    const result = numbers.slice(0); 
+    result.splice(smallestNumberIndex, 1);
+    return result;
+  }
+  return numbers;
+}
