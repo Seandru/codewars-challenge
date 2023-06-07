@@ -336,3 +336,8 @@ function removeSmallest(numbers) {
   }
   return numbers;
 }
+
+// This function adds a numbered index to each element of a given array
+var number=function(array){
+  return array.map((array, index) => `${index + 1}: ${array}`);
+}
