@@ -60,3 +60,10 @@ function arrayDiff(a, b) {
   }
   return a;
 }
+
+// The createPhoneNumber function takes a number, turns it into a string and returns a string made out of 
+// the number digits.
+function createPhoneNumber(numbers){
+  const numbersToString = numbers.toString;
+  return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`;
+}
