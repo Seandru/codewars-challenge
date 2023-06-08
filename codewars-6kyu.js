@@ -67,3 +67,15 @@ function createPhoneNumber(numbers){
   const numbersToString = numbers.toString;
   return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`;
 }
+
+// The countBits function returns the number of bits that are equal to 1 in the binary representation.
+var countBits = function(n) {
+  let binaryN = n.toString(2);
+  let result = 0;
+  for (let i = 0; i < binaryN.length; i++) {
+    if (binaryN[i] === '1') {
+      result += 1;
+    }
+  }
+  return result;
+};
