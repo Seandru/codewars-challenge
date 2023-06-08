@@ -46,4 +46,17 @@ function likes(names) {
     return `${names[0]}, ${names[1]} and ${(names.length - 2)} others like this`;
   }
 }
-  
+
+// The arrayDiff function iterates over each element of a given array, and checks if it exists
+// in the second given array. If it's a match the first array is returned without the matching element.
+function arrayDiff(a, b) {
+  for (let i = 0; i < a.length; i++) {
+    for (let j = 0; j < b.length; j++) {
+      if (b[j] === a[i]) {
+        a.splice(i, 1);
+        i--;
+      }
+    }
+  }
+  return a;
+}
