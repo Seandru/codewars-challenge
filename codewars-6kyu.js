@@ -4,6 +4,7 @@ function solution(number){
       return 0;
     }
     let sum = 0;
+
     for (let i = 3; i < number; i++) {
       if (i % 3 === 0 || i % 5 === 0) {
         sum += i;
@@ -22,6 +23,7 @@ function spinWords(string) {
 function digitalRoot(n) {
   while (n >= 10) {
     let sum = 0;
+
     while (n > 0) {
       sum += n % 10;
       n = Math.floor(n / 10);
@@ -65,6 +67,7 @@ function arrayDiff(a, b) {
 // the number digits.
 function createPhoneNumber(numbers){
   const numbersToString = numbers.toString;
+
   return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`;
 }
 
@@ -72,6 +75,7 @@ function createPhoneNumber(numbers){
 var countBits = function(n) {
   let binaryN = n.toString(2);
   let result = 0;
+
   for (let i = 0; i < binaryN.length; i++) {
     if (binaryN[i] === '1') {
       result += 1;
@@ -100,6 +104,7 @@ function duplicateCount(text) {
   text = text.toLowerCase();
   let count = 0;
   let charCount = {};
+
   for (let char of text) {
     charCount[char] = (charCount[char] || 0) + 1;
   }
@@ -117,6 +122,7 @@ function duplicateEncode(word) {
   word = word.toLowerCase();
   let charCount = {};
   let encoded = '';
+
   for (let char of word) {
     charCount[char] = (charCount[char] || 0) + 1;
   }
@@ -142,8 +148,27 @@ function isValidWalk(walk) {
     e: 0,
     w: 0
   };
+
   for (let direction of walk) {
     count[direction]++;
   }
   return count.n === count.s && count.e === count.w;
+}
+
+// The alphabetPosition function takes a string as input and 
+// returns a new string where each letter is replaced with its corresponding position in the alphabet.
+function alphabetPosition(text) {
+  const textLowerCase = text.toLowerCase();
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  let result = '';
+
+  for(let i = 0; i < text.length; i++){
+    const character = textLowerCase.charAt(i);
+    const position = alphabet.indexOf(character);
+
+    if(position !== -1){
+    result+= (position + 1) + ' ';
+      }
+  }
+  return result.trim();
 }
