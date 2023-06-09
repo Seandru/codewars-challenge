@@ -79,3 +79,20 @@ var countBits = function(n) {
   }
   return result;
 };
+
+// The findOutliner returns the only odd or even number of an array.
+function findOutlier(integers) {
+  const evenIntegers = [];
+  const oddIntegers = [];
+  
+  for(let num of integers){
+    if(num % 2 === 0){
+      evenIntegers.push(num);
+    } else {
+      oddIntegers.push(num);
+    }
+  }
+  return evenIntegers.length === 1 ? evenIntegers[0] : oddIntegers[0];
+}
+
+
