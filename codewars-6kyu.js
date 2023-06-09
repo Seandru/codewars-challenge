@@ -129,3 +129,21 @@ function duplicateEncode(word) {
   }
   return encoded;
 }
+
+// The function isValidWalk checks if a given array of directions 
+// represents a 10-minute walk returning to the starting point.
+function isValidWalk(walk) {
+  if (walk.length !== 10) {
+    return false;
+  }
+  let count = {
+    n: 0,
+    s: 0,
+    e: 0,
+    w: 0
+  };
+  for (let direction of walk) {
+    count[direction]++;
+  }
+  return count.n === count.s && count.e === count.w;
+}
