@@ -95,4 +95,19 @@ function findOutlier(integers) {
   return evenIntegers.length === 1 ? evenIntegers[0] : oddIntegers[0];
 }
 
+// The duplicateCount function counts the occurance of repeated characters in a given string
+function duplicateCount(text) {
+  text = text.toLowerCase();
+  let count = 0;
+  let charCount = {};
+  for (let char of text) {
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+  for (let char in charCount) {
+    if (charCount[char] > 1) {
+      count++;
+    }
+  }
+  return count;
+}
 
