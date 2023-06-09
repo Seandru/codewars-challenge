@@ -111,3 +111,21 @@ function duplicateCount(text) {
   return count;
 }
 
+//The duplicateEncode function convers a character to "(" if it appears only once
+// or ")" if it appears more than once.
+function duplicateEncode(word) {
+  word = word.toLowerCase();
+  let charCount = {};
+  let encoded = '';
+  for (let char of word) {
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+  for (let char of word) {
+    if (charCount[char] > 1) {
+      encoded += ')';
+    } else {
+      encoded += '(';
+    }
+  }
+  return encoded;
+}
