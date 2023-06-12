@@ -172,3 +172,14 @@ function alphabetPosition(text) {
   }
   return result.trim();
 }
+
+// The persistence function calculates the multiplicative persistence of a number by 
+// multiplying its digits until in becomes a single digit number
+function persistence(num) {
+  let count = 0;
+  while(num >= 10){
+    num = num.toString().split('').map(Number).reduce((a, b) => a * b);
+    count++;
+  }
+  return count;
+}
