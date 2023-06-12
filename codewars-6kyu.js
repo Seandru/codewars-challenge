@@ -183,3 +183,12 @@ function persistence(num) {
   }
   return count;
 }
+
+// The order function orders words from a given string, by the digits that are included in the words
+// ex: "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+function order(words) {
+  const wordsArray = words.split(' ');
+  return wordsArray.sort((a, b) => {
+    return a.match(/\d/) - b.match(/\d/);
+  }).join(' ');
+}
