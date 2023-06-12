@@ -192,3 +192,17 @@ function order(words) {
     return a.match(/\d/) - b.match(/\d/);
   }).join(' ');
 }
+
+// The function toCamelCase splits the input string into words, capitalizes the first character 
+// of each word except the first one, and joins them together to form a camel-cased string
+function toCamelCase(str){
+  const words = str.split(/[-_]/);
+  let result = words.map((word, index) => {
+    if (index === 0) {
+      return word;
+    } else {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    }
+  });
+  return result.join('');
+}
