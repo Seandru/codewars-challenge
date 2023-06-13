@@ -236,3 +236,15 @@ function uniqueInOrder(iterable) {
   }
   return iterable.filter((item, index) => item !== iterable[index - 1]);
 }
+
+// The digPow function finds if there is an integer k
+// that satisfies this:(a ^ p + b ^ (p+1) + c ^(p+2) + d ^ (p+3) + ...) = n * k
+function digPow(n, p) {
+  const digits = Array.from(String(n), Number);
+  let sum = 0;
+  for (let i = 0; i < digits.length; i++) {
+    sum += Math.pow(digits[i], p + i);
+  }
+  const k = sum / n;
+  return Number.isInteger(k) ? k : -1;
+}
