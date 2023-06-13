@@ -228,3 +228,11 @@ function narcissistic(value) {
   const result = arr.reduce((sum, digit) => sum + Math.pow(digit, arr.length), 0);
   return result === value;
 }
+
+// The uniqueInOrder function return an array without any similar elements next to each other
+function uniqueInOrder(iterable) {
+  if (!Array.isArray(iterable)) {
+    iterable = Array.from(iterable);
+  }
+  return iterable.filter((item, index) => item !== iterable[index - 1]);
+}
