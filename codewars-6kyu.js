@@ -219,3 +219,12 @@ function tribonacci(signature,n){
   }
   return sequence.slice(0, n);
 }
+
+
+// The narcissistic function checks if a given number is a narcissistic number
+// ex: 153 = 1^3 + 5^3 + 3^3 = 153
+function narcissistic(value) {
+  const arr = Array.from(String(value), Number);
+  const result = arr.reduce((sum, digit) => sum + Math.pow(digit, arr.length), 0);
+  return result === value;
+}
