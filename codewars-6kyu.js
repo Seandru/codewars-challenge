@@ -206,3 +206,16 @@ function toCamelCase(str){
   });
   return result.join('');
 }
+
+// The tribonacci function generates a sequence based on the fibonacci sequence
+function tribonacci(signature,n){
+  if(n === 0){
+    return [];
+  }
+  let sequence = signature.slice();
+  for (let i = 3; i < n; i++) {
+    const nextElement = sequence[i - 1] + sequence[i - 2] + sequence[i - 3];
+    sequence.push(nextElement);
+  }
+  return sequence.slice(0, n);
+}
