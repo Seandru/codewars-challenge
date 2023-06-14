@@ -248,3 +248,11 @@ function digPow(n, p) {
   const k = sum / n;
   return Number.isInteger(k) ? k : -1;
 }
+
+//The isPangram function checks whether a string has all the letters of the alphabet
+// inside it at least once.
+function isPangram(string) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const lowercaseString = string.toLowerCase();
+  return Array.from(alphabet).every(letter => lowercaseString.includes(letter));
+}
