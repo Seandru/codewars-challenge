@@ -256,3 +256,14 @@ function isPangram(string) {
   const lowercaseString = string.toLowerCase();
   return Array.from(alphabet).every(letter => lowercaseString.includes(letter));
 }
+
+// The findUniq function checks if there is a number that is not equal to the rest of the array
+function findUniq(arr) {
+  let uniqueElement;
+  arr.forEach((element) => {
+    if (arr.indexOf(element) === arr.lastIndexOf(element)) {
+      uniqueElement = element;
+    }
+  });
+  return uniqueElement;
+}
