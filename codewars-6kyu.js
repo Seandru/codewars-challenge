@@ -267,3 +267,18 @@ function findUniq(arr) {
   });
   return uniqueElement;
 }
+
+// The solution function splits a string into pairs, and if the string is of odd length
+// the last pair will be [character, '_']
+function solution(str) {
+  const pairs = [];
+  for (let i = 0; i < str.length; i += 2) {
+    const pair = str.slice(i, i + 2);
+    if(pair.length === 1) {
+      pairs.push(pair + '_');
+    } else {
+      pairs.push(pair);
+    }
+  }
+  return pairs;
+}
