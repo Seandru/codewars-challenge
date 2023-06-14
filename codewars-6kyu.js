@@ -282,3 +282,20 @@ function solution(str) {
   }
   return pairs;
 }
+
+// The sortArray function sorts the odd numbers in ascending order while leaving the even numbers in 
+// their original position
+function sortArray(array) {
+  const oddNumbers = array.filter(num => num % 2 !== 0);
+  oddNumbers.sort((a, b) => a - b);
+  let i = 0;
+  return array.map(num => {
+    if (num % 2 !== 0) {
+      const oddNum = oddNumbers[i];
+      i++;
+      return oddNum;
+    } else {
+      return num;
+    }
+  });
+}
