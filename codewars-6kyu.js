@@ -299,3 +299,19 @@ function sortArray(array) {
     }
   });
 }
+
+// The findMissingLetter function returns the missing letter of an array that contains letters
+// consecutive letters
+function findMissingLetter(array) {
+  let missingLetter = '';
+  array.forEach((letter, index) => {
+    if (index < array.length - 1) {
+      const currentCharCode = letter.charCodeAt(0);
+      const nextCharCode = array[index + 1].charCodeAt(0);
+      if (nextCharCode - currentCharCode > 1) {
+        missingLetter = String.fromCharCode(currentCharCode + 1);
+      }
+    }
+  });
+  return missingLetter;
+}
