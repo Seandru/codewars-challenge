@@ -315,3 +315,24 @@ function findMissingLetter(array) {
   });
   return missingLetter;
 }
+
+// The towerBuilder function returns an array of strings in the form of a pyramid
+// with the max width equal to the nFloors.
+function towerBuilder(nFloors) {
+  const tower = [];
+  let width = nFloors * 2 - 1;
+  let spaces = Math.floor(width / 2);
+  for (let i = 0; i < nFloors; i++) {
+    let level = '';
+    for (let j = 0; j < width; j++) {
+      if (j < spaces || j >= width - spaces) {
+        level += ' ';
+      } else {
+        level += '*';
+      }
+    }
+    tower.push(level);
+    spaces--;
+  }
+  return tower;
+}
