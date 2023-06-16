@@ -357,3 +357,12 @@ function high(x) {
   return highestWord;
 }
 
+// The deleteNth function returns a new array where each number appears at most n times, 
+// without changing the order
+function deleteNth(arr, n) {
+  const count = {};
+  return arr.filter(num => { count[num] = (count[num] || 0) + 1;
+  return count[num] <= n;
+  });
+}
+
