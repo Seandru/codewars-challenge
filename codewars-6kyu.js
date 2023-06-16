@@ -336,3 +336,24 @@ function towerBuilder(nFloors) {
   }
   return tower;
 }
+
+// The high function splits the input into words, calculates the score for each
+// word based on the position of its letters in the alphabet and returns the word with the 
+// highest score.
+function high(x) {
+  const words = x.split(' ');
+  let maxScore = 0;
+  let highestWord = '';
+  words.forEach(word => {
+    let score = 0;
+    for (let i = 0; i < word.length; i++) {
+      score += word.charCodeAt(i) - 96; 
+    }
+    if (score > maxScore) {
+      maxScore = score;
+      highestWord = word;
+    }
+  });
+  return highestWord;
+}
+
