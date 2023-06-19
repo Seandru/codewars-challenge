@@ -398,3 +398,17 @@ function validBraces(braces) {
   }
   return stack.length === 0;
 }
+
+// The isPrime function checks if an integer is prime or not
+function isPrime(num) {
+  if (num <= 1) {
+    return false;
+  }
+  const positiveNum = Math.abs(num);
+  for (let i = 2; i <= Math.sqrt(positiveNum); i++) {
+    if (positiveNum % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
