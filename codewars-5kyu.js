@@ -29,3 +29,17 @@ function pigIt(str) {
     
     return pigLatinWords.join(' ');
 }
+
+// The humanReadable function converts seconds to hours, minutes and seconds, 
+//then it returns them into this format: HH:MM:SS
+function humanReadable (seconds) {
+    const readableHours = Math.floor(seconds / 3600);
+    const readableMinutes = Math.floor((seconds % 3600) / 60)
+    const readableSeconds = seconds % 60;
+    
+    const digitHours = readableHours < 10 ? '0' + readableHours : readableHours;
+    const digitMinutes = readableMinutes < 10 ? '0' + readableMinutes : readableMinutes;
+    const digitSeconds = readableSeconds < 10 ? '0' + readableSeconds : readableSeconds;
+    
+    return `${digitHours}:${digitMinutes}:${digitSeconds}`;
+}
