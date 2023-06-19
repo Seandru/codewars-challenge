@@ -12,3 +12,20 @@ function moveZeros(arr) {
     });
     return notZeros.concat(zeros);
 }
+
+// The pigIt function takes a string, reverses and adds 'ay'
+// at the end of each word except punctuation marks.
+function pigIt(str) {
+    const words = str.split(' ');
+    const pigLatinWords = words.map((word) => {
+      if (/^[A-Za-z]+$/.test(word)) {
+        const firstLetter = word[0];
+        const restOfWord = word.slice(1);
+        return restOfWord + firstLetter + 'ay';
+      } else {
+        return word;
+      }
+    });
+    
+    return pigLatinWords.join(' ');
+}
