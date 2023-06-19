@@ -380,3 +380,21 @@ function findNb(m) {
   return (-1);
 }
 
+// The validBraces function returns true or false if the given string includes
+// both the open and closed brace. 
+function validBraces(braces) {
+  const pairs = { '(': ')', '[': ']', '{': '}' };
+  const stack = [];
+  for (let i = 0; i < braces.length; i++) {
+    const brace = braces[i];
+    if (['(', '[', '{'].includes(brace)) {
+      stack.push(brace);
+    } else {
+      const lastBrace = stack.pop();
+      if (!lastBrace || pairs[lastBrace] !== brace) {
+        return false;
+      }
+    }
+  }
+  return stack.length === 0;
+}
