@@ -366,3 +366,17 @@ function deleteNth(arr, n) {
   });
 }
 
+// The findNb function returns the integer n such as n^3+(n−1)^3+(n−2)^3+...+1^3=m
+function findNb(m) {
+  let sum = 0;
+  let n = 1;
+  while (sum < m) {
+    sum += Math.pow(n, 3);
+    if (sum === m) {
+      return n;
+    }
+    n++;
+  }
+  return (-1);
+}
+
