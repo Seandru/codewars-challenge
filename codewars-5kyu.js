@@ -86,3 +86,20 @@ function rot13(message) {
   });
   return convertedMessage.join('');
 }
+
+// The generateHashtag function takes a tr and turns it into a hashtag
+// slicing the empty spaces, capitalizing the first character and adding a # and the start of it.
+function generateHashtag(str) {
+  if (str.trim() === '') { 
+    return false;
+  }
+  const words = str.trim().split(' ');
+  const capitalizedWords = words.map(word => {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+  const hashtag = '#' + capitalizedWords.join('');
+  if (hashtag.length > 140) {
+    return false;
+  }
+  return hashtag;
+}
