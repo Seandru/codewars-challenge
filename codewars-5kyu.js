@@ -43,3 +43,14 @@ function humanReadable (seconds) {
     
     return `${digitHours}:${digitMinutes}:${digitSeconds}`;
 }
+
+// The rgb function converts the red, green and blue variables into 
+// their hex code variables.
+function rgb(r, g, b){
+  const range = (value) => Math.max(0, Math.min(255, Math.round(value)));
+  let redHex = range(r).toString(16).padStart(2, '0').toUpperCase();
+  let greenHex = range(g).toString(16).padStart(2, '0').toUpperCase();
+  let blueHex = range(b).toString(16).padStart(2, '0').toUpperCase();
+  
+  return `${redHex}${greenHex}${blueHex}`;
+}
