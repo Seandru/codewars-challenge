@@ -69,3 +69,20 @@ function dirReduc(arr){
               reducedPath.pop() : reducedPath.push(element));
   return reducedPath;
 }
+
+// The rot13 function ciphers a string using the ROT13, where it replaces a letter with
+// the letter 13 letters after it in the alphabet.
+function rot13(message) {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const convertedMessage = Array.from(message).map(char => {
+    if (alphabet.includes(char.toLowerCase())) {
+      const index = alphabet.indexOf(char.toLowerCase());
+      const newIndex = (index + 13) % 26;
+      const convertedChar = char === char.toLowerCase() ? alphabet[newIndex] : alphabet[newIndex].toUpperCase();
+      return convertedChar;
+    } else {
+      return char;
+    }
+  });
+  return convertedMessage.join('');
+}
