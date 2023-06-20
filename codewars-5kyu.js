@@ -54,3 +54,18 @@ function rgb(r, g, b){
   
   return `${redHex}${greenHex}${blueHex}`;
 }
+
+// The dirReduc function takes an array of directions and returns a simplified version 
+// of the path by removing needless opposite directions that appear side by side.
+function dirReduc(arr){
+  const oppositeDirections = {
+    NORTH: 'SOUTH',
+    SOUTH: 'NORTH',
+    EAST: 'WEST',
+    WEST: 'EAST',
+  };
+  const reducedPath = [];
+  arr.forEach(element => reducedPath[reducedPath.length -1] === oppositeDirections[element] ? 
+              reducedPath.pop() : reducedPath.push(element));
+  return reducedPath;
+}
