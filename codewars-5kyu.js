@@ -103,3 +103,20 @@ function generateHashtag(str) {
   }
   return hashtag;
 }
+
+// The cakes function takes a recipe object and an available ingredients object, iterates over the recipe ingredients
+// calculates the maximum number of cakes that can be made based on the available ingredients and returns the result
+function cakes(recipe, available) {
+  let maxCakes = Infinity; 
+  for (const ingredient in recipe) {
+    if (available.hasOwnProperty(ingredient)) {
+      const requiredAmount = recipe[ingredient];
+      const availableAmount = available[ingredient];
+      const possibleCakes = Math.floor(availableAmount / requiredAmount);
+      maxCakes = Math.min(maxCakes, possibleCakes);
+    } else {
+      return 0;
+    }
+  }
+  return maxCakes;
+}
