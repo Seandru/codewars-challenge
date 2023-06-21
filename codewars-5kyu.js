@@ -131,3 +131,15 @@ function firstNonRepeatingLetter(s) {
   }
   return "";
 }
+
+// The function domainName returns only the domain name from a given url.
+function domainName(url) {
+  let domain = url.replace(/^(https?:\/\/)?(www\.)?/, '');
+  if (domain.startsWith('www.')) {
+    domain = domain.slice(4);
+  }
+  if (domain.indexOf('.') !== -1) {
+    domain = domain.slice(0, domain.indexOf('.'));
+  }
+  return domain;
+}
