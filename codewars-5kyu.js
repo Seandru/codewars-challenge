@@ -120,3 +120,14 @@ function cakes(recipe, available) {
   }
   return maxCakes;
 }
+
+// The firstNonRepeatingLetter returns the first character that appears only once in the given string
+function firstNonRepeatingLetter(s) {
+  for (let i = 0; i < s.length; i++) {
+    let currentChar = s[i].toLowerCase();
+    if (s.toLowerCase().indexOf(currentChar) === s.toLowerCase().lastIndexOf(currentChar)) {
+      return s[i];
+    }
+  }
+  return "";
+}
