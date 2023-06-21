@@ -143,3 +143,16 @@ function domainName(url) {
   }
   return domain;
 }
+
+// The incrementString function takes a string and if it ends with a number it will increment it by 1,
+// if not, it will append 1 to the end of the new string.
+function incrementString (strng) {
+  const digits = strng.match(/\d+$/);
+  if(digits === null){
+    return strng + '1';
+  } else {
+    const incremented = String(Number(digits[0]) + 1);
+    const padString = incremented.padStart(digits[0].length, '0');
+    return strng.replace(/\d+$/, padString);
+  }
+}
