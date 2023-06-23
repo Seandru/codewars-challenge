@@ -343,3 +343,37 @@ function pickPeaks(arr) {
   return { pos, peaks };
 }
 
+
+class PaginationHelper {
+	constructor(collection, itemsPerPage) {
+	  this.collection = collection;
+    this.itemsPerPage = itemsPerPage;
+	}
+// returns total number of items
+	itemCount() {
+	  return this.collection.length;
+	}
+// return total number of pages
+	pageCount() {
+	 return Math.ceil(this.collection.length / this.itemsPerPage);
+	}
+// returns items on a page
+	pageItemCount(pageIndex) {
+	  if (pageIndex < 0 || pageIndex >= this.pageCount()) {
+      return -1;
+    } else if (pageIndex === this.pageCount() - 1) {
+      return this.collection.length % this.itemsPerPage;
+    } else {
+      return this.itemsPerPage;
+    }
+	}
+// returns index of item on a page
+	pageIndex(itemIndex) {
+	  if (itemIndex < 0 || itemIndex >= this.itemCount()){
+      return -1;
+    } else {
+      return Math.floor(itemIndex / this.itemsPerPage);
+    }
+	}
+}
+
