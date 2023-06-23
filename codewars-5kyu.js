@@ -318,3 +318,28 @@ function sumPairs(ints, s) {
   }
   return undefined;
 }
+
+// The pickPeaks function finds and returns the positions and values of peaks in a given array
+// considering plateaus as peaks as well
+function pickPeaks(arr) {
+  const pos = [];
+  const peaks = [];
+  for(let i = 1; i < arr.length - 1; i++) {
+    if(arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
+      pos.push(i);
+      peaks.push(arr[i]);
+    } else if (arr[i] > arr[i - 1] && arr[i] === arr[i + 1]) {
+      let plateauEnd = i + 1;
+      while(plateauEnd < arr.length && arr[plateauEnd] === arr[i]) {
+        plateauEnd++;
+      }
+      if(arr[plateauEnd] < arr[i]) {
+        pos.push(i);
+        peaks.push(arr[i]);
+      }
+      i = plateauEnd - 1;
+    }
+  }
+  return { pos, peaks };
+}
+
