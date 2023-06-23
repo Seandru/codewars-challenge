@@ -271,3 +271,35 @@ function primeFactors(n) {
 
   return result;
 }
+
+// The function listSquared takes a range of numbers, finds the divisors, sums their squared values
+// and returns an array where the first number is the squared divisors of which is a square and 
+// then the sum of the squared divisors.
+function listSquared(m, n) {
+  const results = [];
+
+  for (let num = m; num <= n; num++) {
+    const divisors = [];
+    let sumOfSquares = 0;
+
+    for (let i = 1; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) {
+        divisors.push(i);
+
+        if (i !== num / i) {
+          divisors.push(num / i);
+        }
+      }
+    }
+
+    divisors.forEach((divisor) => {
+      sumOfSquares += divisor * divisor;
+    });
+
+    const sqrt = Math.sqrt(sumOfSquares);
+    if (sqrt === Math.floor(sqrt)) {
+      results.push([num, sumOfSquares]);
+    }
+  }
+  return results;
+}
