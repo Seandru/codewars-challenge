@@ -241,3 +241,33 @@ function perimeter(n) {
 
   return sum * 4;
 }
+
+// The primeFactors function calculates the prime factor decomposition of a given integer
+// and refactors it in a string with the following form: "(p1**n1)(p2**n2)...(pk**nk)"
+function primeFactors(n) {
+  let factors = [];
+  let divisor = 2;
+
+  while (n > 1) {
+    if (n % divisor === 0) {
+      factors.push(divisor);
+      n /= divisor;
+    } else {
+      divisor++;
+    }
+  }
+
+  let result = "";
+  let count = 1;
+
+  for (let i = 0; i < factors.length; i++) {
+    if (factors[i] !== factors[i + 1]) {
+      result += `(${factors[i]}${count > 1 ? `**${count}` : ""})`;
+      count = 1;
+    } else {
+      count++;
+    }
+  }
+
+  return result;
+}
