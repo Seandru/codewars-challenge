@@ -303,3 +303,18 @@ function listSquared(m, n) {
   }
   return results;
 }
+
+// The sumPairs function returns the smallest index numbers that when 
+// added up, they equal the given s
+function sumPairs(ints, s) {
+  const visited = {};
+  
+  for (let i = 0; i < ints.length; i++) {
+    const complement = s - ints[i];
+    if (visited.hasOwnProperty(complement)) {
+      return [complement, ints[i]];
+    }
+    visited[ints[i]] = true;
+  }
+  return undefined;
+}
