@@ -211,3 +211,14 @@ function score( dice ) {
   r += five * 50;
   return r;
 }
+
+// The function zeros counts the number of trailing zeros in the factorial of 
+// a given number by iteratively dividing the number by 5 and summing up the quotients.
+function zeros (n) {
+  let count = 0;
+  while(n > 0){
+    n = Math.floor(n / 5);
+    count += n;
+  }
+  return count;
+}
