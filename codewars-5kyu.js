@@ -377,3 +377,25 @@ class PaginationHelper {
 	}
 }
 
+// The gap function returns the first pair of prime numbers with the gap 'g' between them
+// within the specified range or null if the pair doesn't exists.
+function gap(g, m, n) {
+  let firstPrime = 0;
+  
+  function isPrime(num){
+    if (num < 2) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++){
+      if (num % i === 0) return false;
+    }
+    return true;
+  }
+  
+  for (let i = m; i <= n; i++){
+    if (isPrime(i)){
+      if (i - firstPrime === g) return [firstPrime, i];
+      firstPrime = i;
+    }
+  }
+  
+  return null; 
+}
