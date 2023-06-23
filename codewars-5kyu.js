@@ -222,3 +222,22 @@ function zeros (n) {
   }
   return count;
 }
+
+// The function perimeter calculates the sum of the perimeters of all the squares by 
+// iterating through the Fibonacci sequence and returning the perimeter multiplied by 4
+function perimeter(n) {
+  if (n <= 0) return 4;
+
+  let sum = 2;
+  let a = 1;
+  let b = 1;
+
+  for (let i = 2; i <= n; i++) {
+    const current = a + b;
+    sum += current;
+    a = b;
+    b = current;
+  }
+
+  return sum * 4;
+}
