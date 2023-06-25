@@ -433,3 +433,20 @@ function removeNb(n) {
   }
   return result;
 }
+
+// The function ipsBetwen takes two ip adresses and returns the number of addresses between them
+function ipsBetween(start, end){
+  const startIP = ipToInt(start);
+  const endIP = ipToInt(end);
+  return endIP - startIP;
+}
+
+// The ipToInt function takes an ipAddress and converts it into an integer
+function ipToInt(ipAddress){
+  const parts = ipAddress.split('.');
+  let result = 0;
+  for (let i = 0; i < 4; i++){
+    result = result * 256 + parseInt(parts[i]);
+  }
+  return result;
+}
