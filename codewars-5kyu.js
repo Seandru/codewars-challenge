@@ -399,3 +399,14 @@ function gap(g, m, n) {
   
   return null; 
 }
+
+// The lastDigit function takes 2 non negative integers and returns the last decimal of 
+// a^b.
+var lastDigit = function(str1, str2) {
+  if (str2 === '0') return 1;
+  let base = parseInt(str1.slice(-1));
+  let exponent = parseInt(str2.slice(-2)) % 4 + 4;
+  let result = Math.pow(base, exponent) % 10;
+  return result;
+}
+
