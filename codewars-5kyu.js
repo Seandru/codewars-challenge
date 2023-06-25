@@ -450,3 +450,17 @@ function ipToInt(ipAddress){
   }
   return result;
 }
+
+// The alphanumeric function takes a string and checks if it has the following properties:
+// 1. has at least one char
+// 2. only has latin letters and/or digits from 0-9
+// 3. has no whitespaces / underscores
+function alphanumeric(string){
+  if (string.length === 0) return false; 
+  for (let i = 0; i < string.length; i++) {
+    if (!(string[i] >= 'a' && string[i] <= 'z') && !(string[i] >= 'A' && string[i] <= 'Z') && !(string[i] >= '0' && string[i] <= '9')) {
+      return false; 
+    }
+  }
+  return true;
+}
