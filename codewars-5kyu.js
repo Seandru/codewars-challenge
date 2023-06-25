@@ -410,3 +410,11 @@ var lastDigit = function(str1, str2) {
   return result;
 }
 
+// The function int32ToIp takes a 32 bit number and modifies it into a IPv4 address.
+function int32ToIp(int32) {
+  let octets = [];
+  for (let i = 3; i >= 0; i--) {
+    octets.push((int32 >> (8 * i)) & 255);
+  }
+  return octets.join(".");
+}
