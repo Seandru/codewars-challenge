@@ -418,3 +418,18 @@ function int32ToIp(int32) {
   }
   return octets.join(".");
 }
+
+// The removeNb function takes a number, calculates the sum of all numbers from 1 to n and
+// finds pairs of numbers that their product is equal to the sum excluding the pair and returns them as
+// an array
+function removeNb(n) {
+  const sum = (n * (n + 1)) / 2;
+  const result = [];
+  for (let a = 1; a <= n; a++) {
+    const b = (sum - a) / (a + 1);
+    if (Number.isInteger(b) && b <= n && a !== b) {
+      result.push([a, b]);
+    }
+  }
+  return result;
+}
